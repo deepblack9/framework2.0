@@ -15,8 +15,8 @@ import org.springframework.social.connect.ConnectionFactory;
 import org.springframework.web.servlet.View;
 
 
-@Configuration
-@ConditionalOnProperty(prefix = "earthchen.security.social.weixin", name = "app-id")
+//@Configuration
+//@ConditionalOnProperty(prefix = "earthchen.security.social.weixin", name = "app-id")
 public class WeixinAutoConfiguration extends SocialAutoConfigurerAdapter {
 
     @Autowired

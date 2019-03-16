@@ -1,6 +1,6 @@
 package com.framework.security.core.social.core;
 
-import org.thymeleaf.spring5.SpringTemplateEngine;
+//import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -128,17 +128,17 @@ public class SocialWebAutoConfiguration {
 
     }
 
-    @Configuration
-    @ConditionalOnClass(SpringTemplateEngine.class)
-    protected static class SpringSocialThymeleafConfig {
-
-        @Bean
-        @ConditionalOnMissingBean
-        public SpringSocialDialect springSocialDialect() {
-            return new SpringSocialDialect();
-        }
-
-    }
+//    @Configuration
+//    @ConditionalOnClass(SpringTemplateEngine.class)
+//    protected static class SpringSocialThymeleafConfig {
+//
+//        @Bean
+//        @ConditionalOnMissingBean
+//        public SpringSocialDialect springSocialDialect() {
+//            return new SpringSocialDialect();
+//        }
+//
+//    }
 
     private static class SecurityContextUserIdSource implements UserIdSource {
 

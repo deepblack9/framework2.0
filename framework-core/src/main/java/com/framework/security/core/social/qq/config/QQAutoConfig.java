@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.social.connect.ConnectionFactory;
 
-@Configuration
-@ConditionalOnProperty(prefix = "earthchen.security.social.qq", name = "app-id")
+//@Configuration
+//@ConditionalOnProperty(prefix = "earthchen.security.social.qq", name = "app-id")
 public class QQAutoConfig extends SocialAutoConfigurerAdapter {
 
     @Autowired

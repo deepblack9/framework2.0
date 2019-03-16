@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  * 手动配置类
  */
 @Configuration
-public class WebConfig extends WebMvcConfigurerAdapter{
+public class WebConfig extends WebMvcConfigurationSupport{
 
     @Autowired
     private TimeInterceptor timeInterceptor;
@@ -29,6 +29,9 @@ public class WebConfig extends WebMvcConfigurerAdapter{
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        // addPathPatterns 用于添加拦截规则 
+        // excludePathPatterns 用户排除拦截 
+//        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatternss("/toLogin","/login","/assets/**","/js/**");
         registry.addInterceptor(timeInterceptor);
     }
 

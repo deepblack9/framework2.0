@@ -1,20 +1,47 @@
+server:
+  servlet:
+    session:
+      # 设置session超时时间(最小是1分钟 )
+      timeout: 600
+  port: 8080
+
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://localhost:3306/framework-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/framework-demo?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  #不加这句则默认为myisam引擎
 
   session:
 #    设置spring-session存储类型
     store-type: redis
 
+#  #ThymeLeaf配置
+#  thymeleaf:
+#    #模板的模式，支持 HTML, XML TEXT JAVASCRIPT
+#    mode: HTML5
+#    #编码 可不用配置
+#    encoding: UTF-8
+#    #内容类别,可不用配置
+#    servlet:
+#      content-type: text/html
+#    #开发配置为false,避免修改模板还要重启服务器
+#    cache: false
+#    #配置模板路径，默认是templates，可以不用配置
+#    prefix: classpath:/templates
+
 #  redis:
 #    host: 127.0.0.1
 #    port: 6379
-
-
-
 
 #security:
 #  basic:
@@ -64,17 +91,6 @@ earthchen:
         accessTokenValidateSeconds: 7200
 
       storeType: jwt
-
-
-
-
-
-
-server:
-  session:
-#  设置session超时时间(最小是1分钟 )
-    timeout: 600
-  port: 8080
 
 
 

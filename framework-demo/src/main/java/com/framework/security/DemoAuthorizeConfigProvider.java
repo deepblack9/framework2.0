@@ -7,8 +7,8 @@ import org.springframework.security.config.annotation.web.configurers.Expression
 import org.springframework.stereotype.Component;
 
 
-@Component
-@Order(Integer.MAX_VALUE)
+//@Component
+//@Order(Integer.MAX_VALUE)
 public class DemoAuthorizeConfigProvider implements AuthorizeConfigProvider {
 
     /**

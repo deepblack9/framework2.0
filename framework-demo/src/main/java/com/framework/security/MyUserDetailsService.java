@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 /**
  * 表单登录，社交登录返回user对象服务
  */
-@Component
+//@Component
 public class MyUserDetailsService implements UserDetailsService, SocialUserDetailsService {
 
     private Logger logger = LoggerFactory.getLogger(getClass());

@@ -3,7 +3,7 @@ package com.framework.security.core.properties;
 /**
  * qq登录配置项
  */
-public class QQProperties extends SocialProperties {
+public class QQProperties extends SocialPropertiesAbstract {
 
     /**
      * providerId
