@@ -1,4 +1,4 @@
-package com.earthchen.security.app.authentication.openid;
+package com.framework.security.app.authentication.openid;
 
 import java.util.HashSet;
 import java.util.Set;

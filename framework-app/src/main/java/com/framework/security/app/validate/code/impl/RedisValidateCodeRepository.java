@@ -1,10 +1,10 @@
-package com.earthchen.security.app.validate.code.impl;
+package com.framework.security.app.validate.code.impl;
 
 
-import com.earthchen.security.core.validate.code.ValidateCode;
-import com.earthchen.security.core.validate.code.ValidateCodeException;
-import com.earthchen.security.core.validate.code.ValidateCodeRepository;
-import com.earthchen.security.core.validate.code.ValidateCodeType;
+import com.framework.security.core.validate.code.ValidateCode;
+import com.framework.security.core.validate.code.ValidateCodeException;
+import com.framework.security.core.validate.code.ValidateCodeRepository;
+import com.framework.security.core.validate.code.ValidateCodeType;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

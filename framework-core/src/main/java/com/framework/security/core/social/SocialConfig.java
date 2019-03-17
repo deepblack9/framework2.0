@@ -82,24 +82,25 @@ public class SocialConfig extends SocialConfigurerAdapter {
     public UserIdSource getUserIdSource() {
         return new AuthenticationNameUserIdSource();
     }
-    @Bean
-    public SpringSocialConfigurer imoocSocialSecurityConfig() {
-        // 默认配置类，进行组件的组装
-        // 包括了过滤器SocialAuthenticationFilter 添加到security过滤链中
-        SpringSocialConfigurer springSocialConfigurer = new SpringSocialConfigurer();
-        return springSocialConfigurer;
-    }
 
 //    @Bean
-//    public SpringSocialConfigurer earthchenSecurityConfig() {
-////        return new SpringSocialConfigurer();
-//        String filterProcessesUrl = securityProperties.getSocial().getFilterProcessesUrl();
-//        ImoocSpringSocialConfigurer configurer = new ImoocSpringSocialConfigurer(filterProcessesUrl);
-//        // 设置social中的注册页为
-//        configurer.signupUrl(securityProperties.getBrowser().getRegisterPage());
-//        configurer.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
-//        return configurer;
+//    public SpringSocialConfigurer imoocSocialSecurityConfig() {
+//        // 默认配置类，进行组件的组装
+//        // 包括了过滤器SocialAuthenticationFilter 添加到security过滤链中
+//        SpringSocialConfigurer springSocialConfigurer = new SpringSocialConfigurer();
+//        return springSocialConfigurer;
 //    }
+
+    @Bean
+    public SpringSocialConfigurer earthchenSecurityConfig() {
+//        return new SpringSocialConfigurer();
+        String filterProcessesUrl = securityProperties.getSocial().getFilterProcessesUrl();
+        ImoocSpringSocialConfigurer configurer = new ImoocSpringSocialConfigurer(filterProcessesUrl);
+        // 设置social中的注册页为
+        configurer.signupUrl(securityProperties.getBrowser().getRegisterPage());
+        configurer.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
+        return configurer;
+    }
 
     //https://docs.spring.io/spring-social/docs/1.1.x-SNAPSHOT/reference/htmlsingle/#creating-connections-with-connectcontroller
     // 这个在目前阶段不是必须的，

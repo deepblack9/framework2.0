@@ -1,6 +1,6 @@
-package com.earthchen.security.app.social;
+package com.framework.security.app.social;
 
-import com.earthchen.security.app.AppSecretException;
+import com.framework.security.app.AppSecretException;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

@@ -1,4 +1,4 @@
-package com.earthchen.security.app.authentication;
+package com.framework.security.app.authentication;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.collections.MapUtils;

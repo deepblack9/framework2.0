@@ -1,7 +1,7 @@
-package com.earthchen.security.app.social;
+package com.framework.security.app.social;
 
-import com.earthchen.security.core.properties.SecurityConstants;
-import com.earthchen.security.core.social.support.ImoocSpringSocialConfigurer;
+import com.framework.security.core.properties.SecurityConstants;
+import com.framework.security.core.social.support.ImoocSpringSocialConfigurer;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

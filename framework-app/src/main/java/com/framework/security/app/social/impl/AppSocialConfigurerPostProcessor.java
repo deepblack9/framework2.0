@@ -1,6 +1,6 @@
-package com.earthchen.security.app.social.impl;
+package com.framework.security.app.social.impl;
 
-import com.earthchen.security.core.social.support.SocialAuthenticationFilterPostProcessor;
+import com.framework.security.core.social.support.SocialAuthenticationFilterPostProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.social.security.SocialAuthenticationFilter;

@@ -1,4 +1,4 @@
-package com.earthchen.security.app;
+package com.framework.security.app;
 
 public class AppSecretException extends RuntimeException {
 

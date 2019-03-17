@@ -1,11 +1,11 @@
-package com.earthchen.security.app;
+package com.framework.security.app;
 
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.earthchen.security.app.social.AppSingUpUtils;
-import com.earthchen.security.core.properties.SecurityConstants;
-import com.earthchen.security.core.social.support.SocialUserInfo;
+import com.framework.security.app.social.AppSingUpUtils;
+import com.framework.security.core.properties.SecurityConstants;
+import com.framework.security.core.social.support.SocialUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.social.connect.Connection;

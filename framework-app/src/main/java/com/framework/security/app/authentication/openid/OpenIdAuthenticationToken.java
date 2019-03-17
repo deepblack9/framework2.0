@@ -1,4 +1,4 @@
-package com.earthchen.security.app.authentication.openid;
+package com.framework.security.app.authentication.openid;
 
 
 import java.util.Collection;
@@ -40,7 +40,6 @@ public class OpenIdAuthenticationToken extends AbstractAuthenticationToken {
      * authentication token.
      *
      * @param principal
-     * @param credentials
      * @param authorities
      */
     public OpenIdAuthenticationToken(Object principal,

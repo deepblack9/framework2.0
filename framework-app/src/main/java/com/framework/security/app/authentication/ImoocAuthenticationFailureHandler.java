@@ -1,4 +1,4 @@
-package com.earthchen.security.app.authentication;
+package com.framework.security.app.authentication;
 
 import java.io.IOException;
 
@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.earthchen.security.core.support.SimpleResponse;
+import com.framework.security.core.support.SimpleResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

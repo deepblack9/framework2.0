@@ -1,4 +1,4 @@
-package com.earthchen.security.app.authentication.openid;
+package com.framework.security.app.authentication.openid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

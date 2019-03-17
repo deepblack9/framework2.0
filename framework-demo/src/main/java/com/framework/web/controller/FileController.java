@@ -23,7 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/file")
 public class FileController {
 
-    private String folder = "/home/earthchen/study/design-parttern/java/imooc-security";
+    private String folder = "/home/framework/study/design-parttern/java/imooc-security";
 
     /**
      * 文件上传

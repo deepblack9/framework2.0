@@ -1,8 +1,7 @@
-package com.earthchen.security.app.server;
+package com.framework.security.app.server;
 
-
-import com.earthchen.security.app.jwt.ImoocJwtTokenEnhancer;
-import com.earthchen.security.core.properties.SecurityProperties;
+import com.framework.security.app.jwt.ImoocJwtTokenEnhancer;
+import com.framework.security.core.properties.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

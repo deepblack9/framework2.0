@@ -1,12 +1,10 @@
-package com.earthchen.security.app.server;
+package com.framework.security.app.server;
 
 
-import com.earthchen.security.core.properties.OAuth2ClientProperties;
-import com.earthchen.security.core.properties.SecurityProperties;
-import jdk.nashorn.internal.parser.Token;
+import com.framework.security.core.properties.OAuth2ClientProperties;
+import com.framework.security.core.properties.SecurityProperties;
 import org.apache.commons.lang.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -42,7 +40,7 @@ public class ImoocAuthorizationServerConfig extends AuthorizationServerConfigure
     private SecurityProperties securityProperties;
 
     @Autowired
-    private TokenStore tokenStore;
+    private TokenStore jwtTokenStore;
 
     @Autowired(required = false)
     private JwtAccessTokenConverter jwtAccessTokenConverter;
@@ -53,7 +51,7 @@ public class ImoocAuthorizationServerConfig extends AuthorizationServerConfigure
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.tokenStore(tokenStore)
+        endpoints.tokenStore(jwtTokenStore)
                 .authenticationManager(authenticationManager)
                 .userDetailsService(userDetailsService);
         // 如果jwt转换器和jwt增强器都存在

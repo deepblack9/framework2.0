@@ -17,21 +17,26 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-parent</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.framework</groupId>
-            <artifactId>framework-browser</artifactId>
-            <version>${framework.security.version}</version>
-        </dependency>
         <!--<dependency>-->
-        <!--<groupId>com.earthchen</groupId>-->
-        <!--<artifactId>security-app</artifactId>-->
-        <!--<version>${earthchen.security.version}</version>-->
+            <!--<groupId>com.framework</groupId>-->
+            <!--<artifactId>framework-browser</artifactId>-->
+            <!--<version>${framework.security.version}</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>com.framework</groupId>
-            <artifactId>framework-authorize</artifactId>
+            <artifactId>framework-app</artifactId>
             <version>${framework.security.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.framework</groupId>
+            <artifactId>framework-core</artifactId>
+            <version>${framework.security.version}</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.framework</groupId>-->
+            <!--<artifactId>framework-authorize</artifactId>-->
+            <!--<version>${framework.security.version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-properties-migrator</artifactId>
@@ -49,6 +54,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
         <!--切片-->
         <dependency>
@@ -64,10 +77,17 @@
             <artifactId>spring-social-config</artifactId>
         </dependency>
         <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
         </dependency>
-
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
