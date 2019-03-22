@@ -8,6 +8,13 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.jwt.crypto.sign.MacSigner;
+import org.springframework.security.jwt.crypto.sign.Signer;
+import org.springframework.security.oauth2.common.util.RandomValueStringGenerator;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
@@ -34,6 +41,22 @@ public class TokenStoreConfig {
     public TokenStore redisTokenStore() {
         return new RedisTokenStore(redisConnectionFactory);
     }
+
+//    @Bean("appRedisTemplate")
+//    public RedisTemplate<String, User> redisTemplate(
+//            RedisConnectionFactory redisConnectionFactory) {
+//        RedisTemplate<String, User> template = new RedisTemplate<String, User>();
+//        Jackson2JsonRedisSerializer<User> j = new Jackson2JsonRedisSerializer<User>(User.class);
+//        // value值的序列化采用fastJsonRedisSerializer
+//        template.setValueSerializer(j);
+//        template.setHashValueSerializer(j);
+//        // key的序列化采用StringRedisSerializer
+//        template.setKeySerializer(new StringRedisSerializer());
+//        template.setHashKeySerializer(new StringRedisSerializer());
+//
+//        template.setConnectionFactory(redisConnectionFactory);
+//        return template;
+//    }
 
 
     /**

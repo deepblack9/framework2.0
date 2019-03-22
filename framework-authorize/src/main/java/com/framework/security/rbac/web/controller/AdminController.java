@@ -1,11 +1,14 @@
 
 package com.framework.security.rbac.web.controller;
 
+import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.framework.security.rbac.dto.AdminCondition;
 import com.framework.security.rbac.dto.AdminInfo;
+
+import java.security.Principal;
 
 /**
  * @author zhailiang
@@ -32,13 +37,23 @@ public class AdminController {
 	
 	/**
 	 * 获取当前登录的管理员信息
-	 * @param adminInfo
+//	 * @param adminInfo
 	 * @return
 	 */
 	@GetMapping("/me")
-	public AdminInfo me(@AuthenticationPrincipal UserDetails user) {
-		AdminInfo info = new AdminInfo();
-		info.setUsername(user.getUsername());
+//	public AdminInfo me(@AuthenticationPrincipal Admin admin) {
+//  public AdminInfo me(Principal principal) {
+	public AdminInfo me() {
+		String username = null;
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+			username = ((UserDetails) principal).getUsername();
+		}
+		if (principal instanceof Principal) {
+			username = ((Principal) principal).getName();
+		}
+		username = String.valueOf(principal);
+		AdminInfo info = adminService.getInfo(username);
 		return info;
 	}
 
@@ -83,7 +98,7 @@ public class AdminController {
 
 	/**
 	 * 分页查询管理员
-	 * @param adminInfo
+	 * @param condition
 	 * @param pageable
 	 * @return
 	 */

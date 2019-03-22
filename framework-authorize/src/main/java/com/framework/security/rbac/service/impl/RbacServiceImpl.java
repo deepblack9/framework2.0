@@ -4,13 +4,12 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.service.RbacService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
-
-import com.framework.security.rbac.domain.Admin;
 
 /**
  * @author zhailiang

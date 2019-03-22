@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserControllerTest {
+public class AdminControllerTest {
 
     @Autowired
     private WebApplicationContext wac;

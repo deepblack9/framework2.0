@@ -1,5 +1,6 @@
 package com.framework.security.rbac.authentication;
 
+import com.framework.security.rbac.domain.Admin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.repository.AdminRepository;
 
 /**

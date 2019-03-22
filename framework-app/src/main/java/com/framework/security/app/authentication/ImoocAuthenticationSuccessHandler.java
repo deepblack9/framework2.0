@@ -48,8 +48,6 @@ public class ImoocAuthenticationSuccessHandler extends SavedRequestAwareAuthenti
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
 
-        logger.info("登录成功");
-
         // 获取请求头中的Authorization
         String header = request.getHeader("Authorization");
         // 是否以Basic开头
@@ -71,6 +69,8 @@ public class ImoocAuthenticationSuccessHandler extends SavedRequestAwareAuthenti
             throw new UnapprovedClientAuthenticationException("clientSecret不匹配:" + clientId);
         }
 
+        logger.info("登录成功");
+
         TokenRequest tokenRequest = new TokenRequest(MapUtils.EMPTY_MAP,
                 clientId,
                 clientDetails.getScope(),
@@ -86,7 +86,6 @@ public class ImoocAuthenticationSuccessHandler extends SavedRequestAwareAuthenti
 
         response.setContentType("application/json;charset=UTF-8");
         response.getWriter().write(objectMapper.writeValueAsString(token));
-
     }
 
     /**

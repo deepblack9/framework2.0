@@ -95,11 +95,11 @@ public class UserController {
 //     * @return
 //     */
 //    @GetMapping("/user")
-//    public List<User> getUser(UserQueryCondition userQueryCondition) {
-//        List<User> users = new ArrayList<>();
-//        users.add(new User("111", "1111"));
-//        users.add(new User("111", "1111"));
-//        users.add(new User("111", "1111"));
+//    public List<Admin> getAdmin(UserQueryCondition userQueryCondition) {
+//        List<Admin> users = new ArrayList<>();
+//        users.add(new Admin("111", "1111"));
+//        users.add(new Admin("111", "1111"));
+//        users.add(new Admin("111", "1111"));
 //        return users;
 //    }
 
@@ -115,7 +115,7 @@ public class UserController {
 //     * @return
 //     */
 //    @GetMapping("/user")
-//    public List<User> getUser(@RequestParam String username,
+//    public List<Admin> getAdmin(@RequestParam String username,
 //                              @PageableDefault(page = 2,
 //                                      size = 12,
 //                                      sort = "age,desc") Pageable pageable) {
@@ -124,10 +124,10 @@ public class UserController {
 //        System.out.println(pageable.getPageNumber());
 //        System.out.println(pageable.getSort());
 //
-//        List<User> users = new ArrayList<>();
-//        users.add(new User("111", "1111"));
-//        users.add(new User("111", "1111"));
-//        users.add(new User("111", "1111"));
+//        List<Admin> users = new ArrayList<>();
+//        users.add(new Admin("111", "1111"));
+//        users.add(new Admin("111", "1111"));
+//        users.add(new Admin("111", "1111"));
 //        return users;
 //    }
 

@@ -2,6 +2,7 @@ package com.framework.security.rbac.service.impl;
 
 import java.util.List;
 
+import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.repository.AdminRepository;
 import com.framework.security.rbac.repository.ResourceRepository;
 import com.framework.security.rbac.service.ResourceService;
@@ -10,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.domain.Resource;
 import com.framework.security.rbac.dto.ResourceInfo;
 

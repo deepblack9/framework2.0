@@ -14,14 +14,14 @@
 			</div>
 			<div class="nav-container">
 				<div class="pull-right m-right-sm">
-					<div class="user-block hidden-xs" ng-class="showPersonMenu?'open':''">
+					<div class="admin-block hidden-xs" ng-class="showPersonMenu?'open':''">
 						<a ng-click="showPersonMenu = !showPersonMenu; notificationBoxShow = false; messageBoxShow = false;" href="javascript:;" id="userToggle" data-toggle="dropdown"> 
-							<div class="user-detail inline-block">
+							<div class="admin-detail inline-block">
 								{{currentAdmin.username}} 
 							</div>
 						</a>
 					</div>
-					<div  class="user-block" style="padding-top: 16px;">
+					<div  class="admin-block" style="padding-top: 16px;">
 						<a href="javascript:;" ng-click="updatePassword()"><i class="fa fa-key fa-lg"></i><span class="m-left-xs">修改密码</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="/signOut"><i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">退出</span></a>
 						
@@ -61,7 +61,7 @@
 				</ul>
 			</div>
 			<div class="sidebar-fix-bottom clearfix">
-				<div class="user-dropdown dropup pull-left">
+				<div class="admin-dropdown dropup pull-left">
 				</div>
 				<a href="logout" class="pull-right font-18"><i class="ion-log-out"></i></a>
 			</div>

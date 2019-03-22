@@ -1,0 +1,76 @@
+Manifest-Version: 1.0
+Class-Path: libs/slf4j-api-1.7.25.jar libs/spring-boot-starter-data-jp
+ a-2.1.3.RELEASE.jar libs/spring-session-1.3.5.RELEASE.jar libs/handle
+ bars-4.0.7.jar libs/joda-time-2.10.1.jar libs/spring-boot-2.1.3.RELEA
+ SE.jar libs/spring-aop-5.1.5.RELEASE.jar libs/spring-jcl-5.1.5.RELEAS
+ E.jar libs/springfox-swagger2-2.7.0.jar libs/javassist-3.23.1-GA.jar 
+ libs/mockito-core-2.23.4.jar libs/jul-to-slf4j-1.7.25.jar libs/spring
+ -boot-starter-test-2.1.3.RELEASE.jar libs/javax.transaction-api-1.3.j
+ ar libs/commons-beanutils-1.9.3.jar libs/spring-tx-5.1.5.RELEASE.jar 
+ libs/json-smart-2.3.jar libs/javax.servlet-api-4.0.1.jar libs/spring-
+ boot-configuration-processor-2.1.3.RELEASE.jar libs/spring-social-con
+ fig-1.1.4.RELEASE.jar libs/httpclient-4.5.2.jar libs/spring-social-se
+ curity-1.1.4.RELEASE.jar libs/javax.annotation-api-1.3.2.jar libs/jun
+ it-4.12.jar libs/jetty-servlets-9.4.14.v20181114.jar libs/reactor-cor
+ e-3.2.6.RELEASE.jar libs/spring-test-5.1.5.RELEASE.jar libs/spring-we
+ b-5.1.5.RELEASE.jar libs/netty-buffer-4.1.33.Final.jar libs/xmlunit-l
+ egacy-2.6.2.jar libs/javax.activation-api-1.2.0.jar libs/jetty-xml-9.
+ 4.14.v20181114.jar libs/swagger-annotations-1.5.13.jar libs/spring-or
+ m-5.1.5.RELEASE.jar libs/netty-codec-4.1.33.Final.jar libs/lettuce-co
+ re-5.1.4.RELEASE.jar libs/netty-transport-4.1.33.Final.jar libs/sprin
+ g-boot-autoconfigure-2.1.3.RELEASE.jar libs/commons-collections-3.2.2
+ .jar libs/aspectjweaver-1.9.2.jar libs/guava-18.0.jar libs/spring-boo
+ t-starter-data-redis-2.1.3.RELEASE.jar libs/hamcrest-core-1.3.jar lib
+ s/accessors-smart-1.2.jar libs/mapstruct-1.1.0.Final.jar libs/spring-
+ data-redis-2.1.5.RELEASE.jar libs/hamcrest-library-1.3.jar libs/sprin
+ gfox-schema-2.7.0.jar libs/zjsonpatch-0.4.4.jar libs/jetty-server-9.4
+ .14.v20181114.jar libs/spring-security-config-5.1.4.RELEASE.jar libs/
+ log4j-to-slf4j-2.11.2.jar libs/jaxb-api-2.3.1.jar libs/spring-jdbc-5.
+ 1.5.RELEASE.jar libs/springfox-swagger-ui-2.7.0.jar libs/spring-data-
+ commons-2.1.5.RELEASE.jar libs/javax.persistence-api-2.2.jar libs/jet
+ ty-util-9.4.14.v20181114.jar libs/assertj-core-3.11.1.jar libs/common
+ s-io-2.5.jar libs/spring-context-support-5.1.5.RELEASE.jar libs/logba
+ ck-classic-1.2.3.jar libs/mysql-connector-java-8.0.15.jar libs/spring
+ fox-spring-web-2.7.0.jar libs/swagger-models-1.5.13.jar libs/byte-bud
+ dy-1.9.10.jar libs/spring-data-keyvalue-2.1.5.RELEASE.jar libs/spring
+ -social-web-1.1.4.RELEASE.jar libs/spring-boot-starter-2.1.3.RELEASE.
+ jar libs/jetty-security-9.4.14.v20181114.jar libs/antlr-2.7.7.jar lib
+ s/classmate-1.4.0.jar libs/reactive-streams-1.0.2.jar libs/springfox-
+ spi-2.7.0.jar libs/bcpkix-jdk15on-1.60.jar libs/snakeyaml-1.23.jar li
+ bs/handlebars-helpers-4.0.7.jar libs/jetty-webapp-9.4.14.v20181114.ja
+ r libs/wiremock-2.21.0.jar libs/jackson-annotations-2.9.0.jar libs/xm
+ lunit-core-2.6.2.jar libs/spring-plugin-core-1.2.0.RELEASE.jar libs/s
+ pring-security-jwt-1.0.10.RELEASE.jar libs/spring-plugin-metadata-1.2
+ .0.RELEASE.jar libs/spring-context-5.1.5.RELEASE.jar libs/spring-secu
+ rity-core-5.1.4.RELEASE.jar libs/javassist-3.21.0-GA.jar libs/spring-
+ core-5.1.5.RELEASE.jar libs/jboss-logging-3.3.2.Final.jar libs/spring
+ -boot-starter-jdbc-2.1.3.RELEASE.jar libs/jopt-simple-5.0.3.jar libs/
+ dom4j-2.1.1.jar libs/netty-handler-4.1.33.Final.jar libs/hibernate-co
+ re-5.3.7.Final.jar libs/netty-resolver-4.1.33.Final.jar libs/spring-s
+ ocial-core-1.1.4.RELEASE.jar libs/jackson-core-2.9.8.jar libs/jackson
+ -mapper-asl-1.9.13.jar libs/jetty-servlet-9.4.14.v20181114.jar libs/c
+ ommons-codec-1.11.jar libs/spring-expression-5.1.5.RELEASE.jar libs/s
+ pringfox-swagger-common-2.7.0.jar libs/spring-boot-test-autoconfigure
+ -2.1.3.RELEASE.jar libs/jjwt-0.7.0.jar libs/bcprov-jdk15on-1.60.jar l
+ ibs/json-path-2.4.0.jar libs/spring-beans-5.1.5.RELEASE.jar libs/jett
+ y-http-9.4.14.v20181114.jar libs/jsonassert-1.5.0.jar libs/asm-7.0.ja
+ r libs/logback-core-1.2.3.jar libs/validation-api-2.0.1.Final.jar lib
+ s/android-json-0.0.20131108.vaadin1.jar libs/spring-boot-test-2.1.3.R
+ ELEASE.jar libs/HikariCP-3.2.0.jar libs/netty-common-4.1.33.Final.jar
+  libs/jackson-core-asl-1.9.13.jar libs/reflections-0.9.11.jar libs/je
+ tty-continuation-9.4.14.v20181114.jar libs/log4j-api-2.11.2.jar libs/
+ commons-logging-1.2.jar libs/spring-boot-configuration-metadata-2.1.3
+ .RELEASE.jar libs/jetty-io-9.4.14.v20181114.jar libs/httpcore-4.4.11.
+ jar libs/javax.inject-1.jar libs/spring-boot-starter-aop-2.1.3.RELEAS
+ E.jar libs/commons-lang3-3.8.1.jar libs/hibernate-commons-annotations
+ -5.0.4.Final.jar libs/byte-buddy-agent-1.9.10.jar libs/springfox-core
+ -2.7.0.jar libs/spring-aspects-5.1.5.RELEASE.jar libs/spring-data-jpa
+ -2.1.5.RELEASE.jar libs/objenesis-2.6.jar libs/spring-boot-properties
+ -migrator-2.1.3.RELEASE.jar libs/spring-webmvc-5.1.5.RELEASE.jar libs
+ /spring-oxm-5.1.5.RELEASE.jar libs/jandex-2.0.5.Final.jar libs/jackso
+ n-databind-2.9.8.jar libs/spring-security-web-5.1.4.RELEASE.jar libs/
+ antlr4-runtime-4.7.1.jar libs/spring-security-oauth2-2.3.5.RELEASE.ja
+ r libs/commons-lang-2.6.jar libs/spring-boot-starter-logging-2.1.3.RE
+ LEASE.jar
+Main-Class: com.framework.DemoApplication
+

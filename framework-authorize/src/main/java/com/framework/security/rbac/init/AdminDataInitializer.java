@@ -3,6 +3,7 @@ package com.framework.security.rbac.init;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.framework.security.rbac.domain.*;
 import com.framework.security.rbac.repository.AdminRepository;
 import com.framework.security.rbac.repository.ResourceRepository;
 import com.framework.security.rbac.repository.RoleAdminRepository;
@@ -13,10 +14,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.framework.security.rbac.domain.Admin;
-import com.framework.security.rbac.domain.Resource;
-import com.framework.security.rbac.domain.ResourceType;
-import com.framework.security.rbac.domain.Role;
-import com.framework.security.rbac.domain.RoleAdmin;
 
 /**
  * 默认的系统数据初始化器，永远在其他数据初始化器之前执行

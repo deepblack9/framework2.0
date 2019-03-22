@@ -30,12 +30,12 @@ public class MyUserDetailsService implements UserDetailsService, SocialUserDetai
         // 根据用户名查找用户信息
 
         // 根据查找到的用户信息判断用户是否被冻结
-//        return new User(username,
+//        return new Admin(username,
 //                "123456",
 //                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
         // 这里的user只要是UserDetails的实现类即可
-//        return new User(username,
+//        return new Admin(username,
 //                "123456",
 //                true,
 //                true,
@@ -44,7 +44,7 @@ public class MyUserDetailsService implements UserDetailsService, SocialUserDetai
 //                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
         // 实际第二个参数应该是直接从数据库中读取出来的
-//        return new User(username,
+//        return new Admin(username,
 //                passwordEncoder.encode("123456"),
 //                true,
 //                true,

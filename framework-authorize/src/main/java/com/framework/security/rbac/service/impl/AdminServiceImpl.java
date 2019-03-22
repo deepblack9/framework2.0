@@ -1,5 +1,6 @@
 package com.framework.security.rbac.service.impl;
 
+import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.repository.AdminRepository;
 import com.framework.security.rbac.repository.RoleAdminRepository;
 import com.framework.security.rbac.repository.RoleRepository;
@@ -15,7 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.framework.security.rbac.domain.Admin;
 import com.framework.security.rbac.domain.RoleAdmin;
 import com.framework.security.rbac.dto.AdminCondition;
 import com.framework.security.rbac.dto.AdminInfo;
@@ -102,6 +102,15 @@ public class AdminServiceImpl implements AdminService {
 	public AdminInfo getInfo(Long id) {
 //		Admin admin = adminRepository.findOne(id);
 		Admin admin = adminRepository.findById(id).orElse(null);
+		AdminInfo info = new AdminInfo();
+		BeanUtils.copyProperties(admin, info);
+		return info;
+	}
+
+	@Override
+	public AdminInfo getInfo(String username) {
+		//		Admin admin = adminRepository.findOne(id);
+		Admin admin = adminRepository.findByUsername(username);
 		AdminInfo info = new AdminInfo();
 		BeanUtils.copyProperties(admin, info);
 		return info;

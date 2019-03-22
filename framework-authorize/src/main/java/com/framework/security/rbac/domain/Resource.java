@@ -88,7 +88,7 @@ public class Resource {
 		
 		List<ResourceInfo> children = new ArrayList<ResourceInfo>();
 		for (Resource child : getChilds()) {
-			if(StringUtils.equals(admin.getUsername(), "admin") || 
+			if(StringUtils.equals(admin.getUsername(), "admin") ||
 					resourceIds.contains(child.getId())){
 				children.add(child.toTree(admin));
 			}

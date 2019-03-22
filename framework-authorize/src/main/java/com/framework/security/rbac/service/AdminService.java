@@ -38,6 +38,12 @@ public interface AdminService {
 	 */
 	AdminInfo getInfo(Long id);
 	/**
+	 * 获取管理员详细信息
+	 * @param username
+	 * @return
+	 */
+	AdminInfo getInfo(String username);
+	/**
 	 * 分页查询管理员
 	 * @param condition
 	 * @return

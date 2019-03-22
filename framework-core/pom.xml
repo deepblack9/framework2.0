@@ -69,6 +69,10 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <!-- 使用thymeleaf模板 有问题-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
