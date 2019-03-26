@@ -11,11 +11,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 @ConfigurationProperties(prefix = "swagger")
 public class SwaggerProperties {
-    String title;
-    String description;
-    String version;
-    String license;
-    String licenseUrl;
-    String email;
-    boolean enable;
+    String title = "微服务框架2.0";
+    String description = "微服务框架2.0 接口文档";
+    String version = "1.0.0";
+    String license = "Bruce Wang";
+    String licenseUrl = "";
+    String email = "seed_922@163.com";
+    boolean enable = false;
 }

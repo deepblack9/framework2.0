@@ -1,6 +1,8 @@
 package com.framework.security.rbac.dto;
 
 import javax.validation.constraints.NotBlank;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author zhailiang
@@ -19,6 +21,8 @@ public class AdminInfo {
 	 */
 	@NotBlank(message = "用户名不能为空")
 	private String username;
+
+	private Set<String> urls = new HashSet<>();
 
 	/**
 	 * @return the id
@@ -61,5 +65,12 @@ public class AdminInfo {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
+
+	public Set<String> getUrls() {
+		return urls;
+	}
+
+	public void setUrls(Set<String> urls) {
+		this.urls = urls;
+	}
 }

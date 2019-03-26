@@ -56,7 +56,7 @@ public class UserController {
     @GetMapping("/me")
     public Object getCurrentUser(Authentication user, HttpServletRequest request) throws UnsupportedEncodingException {
 
-        String token = StringUtils.substringAfter(request.getHeader("Authorization"), "Bearer ");
+        String token = StringUtils.substringAfter(request.getHeader("Authorization"), "bearer ");
 
         Claims claims = Jwts.parser().setSigningKey(
                 securityProperties.getOauth2().getJwtSigningKey().getBytes("UTF-8"))

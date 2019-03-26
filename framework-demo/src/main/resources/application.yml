@@ -90,12 +90,12 @@ earthchen:
         accessTokenValidateSeconds: 7200
       storeType: jwt
 swagger:
-  title: 鑫隆泰抵质押物智能监管平台
-  description: 鑫隆泰抵质押物智能监管平台接口文档
-  version: 1.0.0
-  license: 盘锦福瑞电子科技有限公司
-  licenseUrl: http://www.baidu.com
-  email: seed_922@163.com
+#  title: 服务框架2.0
+#  description: 鑫隆泰抵质押物智能监管平台接口文档
+#  version: 1.0.0
+#  license: GPL
+#  licenseUrl: http://www.baidu.com
+#  email: seed_922@163.com
   enable: true
 
 
