@@ -32,7 +32,8 @@ public class RbacAuthorizeConfigProvider implements AuthorizeConfigProvider {
 					"/swagger-resources/configuration/ui",//用来获取支持的动作
 					"/swagger-resources/configuration/security",//安全选项
 					"/webjars/**",//用来获取js脚本
-					"/swagger-ui.html"
+					"/swagger-ui.html",
+					"/actuator/**"//用来监控
 			).permitAll()
 
 			.antMatchers(HttpMethod.GET, 

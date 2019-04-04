@@ -3,9 +3,58 @@ server:
     session:
       # 设置session超时时间(最小是1分钟 )
       timeout: 600
-  port: 8080
+  port: 8081
+
+# 设置服务监测
+management:
+  logging:
+    file: fileDir
+  endpoint:
+    beans:
+      enabled: false
+    health:
+      show-details: always
+  endpoints:
+    logfile:
+      enabled: true
+    web:
+      # 比较重要,默认 /actuator spring-boot-admin 扫描不到
+#      base-path: /
+      exposure:
+        # 加载所有的端点/默认只加载了 info / health
+        include: "*"
+info:
+  version: @project.version@
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+
+  # 登陆所需的账号密码
+#  spring.security.user.name=battcn
+#  spring.security.user.password=battcn
+  # 便于客户端可以在受保护的服务器上注册api
+#  spring.boot.admin.client.username=battcn
+#  spring.boot.admin.client.password=battcn
+  # 便服务器可以访问受保护的客户端端点
+#  spring.boot.admin.client.instance.metadata.user.name=battcn
+#  spring.boot.admin.client.instance.metadata.user.password=battcn
 
 spring:
+  security:
+    user:
+      name: admin
+      password: admin
+  # 设置服务监测地址
+  boot:
+    admin:
+      client:
+        username: admin
+        password: admin
+        url: http://localhost:8080
+        instance:
+          metadata:
+            user:
+              name: admin
+              password: admin
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -91,10 +140,10 @@ earthchen:
       storeType: jwt
 swagger:
 #  title: 服务框架2.0
-#  description: 鑫隆泰抵质押物智能监管平台接口文档
+#  description: 服务框架2.0 接口文档
 #  version: 1.0.0
-#  license: GPL
-#  licenseUrl: http://www.baidu.com
+#  license: Bruce Wang
+#  licenseUrl:
 #  email: seed_922@163.com
   enable: true
 

@@ -1,6 +1,11 @@
 package com.framework.security.rbac.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.bean.copier.CopyOptions;
 import com.framework.security.rbac.domain.Admin;
+import com.framework.security.rbac.domain.RoleAdmin;
+import com.framework.security.rbac.dto.AdminCondition;
+import com.framework.security.rbac.dto.AdminInfo;
 import com.framework.security.rbac.repository.AdminRepository;
 import com.framework.security.rbac.repository.RoleAdminRepository;
 import com.framework.security.rbac.repository.RoleRepository;
@@ -15,10 +20,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.framework.security.rbac.domain.RoleAdmin;
-import com.framework.security.rbac.dto.AdminCondition;
-import com.framework.security.rbac.dto.AdminInfo;
 
 /**
  * @author zhailiang
@@ -112,7 +113,7 @@ public class AdminServiceImpl implements AdminService {
 		//		Admin admin = adminRepository.findOne(id);
 		Admin admin = adminRepository.findByUsername(username);
 		AdminInfo info = new AdminInfo();
-		BeanUtils.copyProperties(admin, info);
+        BeanUtil.copyProperties(admin, info, CopyOptions.create().setIgnoreNullValue(true));
 		return info;
 	}
 
